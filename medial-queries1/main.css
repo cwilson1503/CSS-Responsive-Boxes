@@ -1,3 +1,50 @@
+* {
+  border: 1px solid green;
+  box-sizing: content-box;
+}
 body {
   background: blanchedalmond;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;  
+  width: 100%;
+}
+
+.a,.b,.c {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.a{
+  display: flex;
+  flex-grow: 1;
+}
+.b{
+  display: flex;
+  flex-grow: 4;
+  min-height: 500px;
+}
+.c{
+  display: flex;
+  flex-grow: 1;
+}
+
+@media (min-width: 768px) {
+  .container{
+    
+  }
+  .b,.c{
+    flex-direction: row;
+  }
+  .b{
+    width: 75%;
+  }
+  .c{
+    width: 25%;
+  }
 }
